@@ -7,83 +7,83 @@ const WorkGallery: React.FC = () => {
   const works = [
     {
       id: 1,
-      title: "The Lion King - Broadway",
+      title: "The Lion King",
       image: "https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       size: "tall",
-      description: "Starring as Simba in the Broadway production"
+      description: "Broadway Musical - Starring as Simba"
     },
     {
       id: 2,
-      title: "Hamilton - West End",
+      title: "Hamilton",
       image: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       size: "square",
-      description: "Revolutionary performance in London's West End"
+      description: "West End Production - Revolutionary Performance"
     },
     {
       id: 3,
       title: "Phantom of the Opera",
       image: "https://images.pexels.com/photos/3823211/pexels-photo-3823211.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       size: "tall",
-      description: "Haunting portrayal of the mysterious Phantom"
+      description: "Classic Musical - The Phantom's Haunting Voice"
     },
     {
       id: 4,
-      title: "Concert at Royal Albert Hall",
+      title: "Wicked",
       image: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400&h=300",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       size: "wide",
-      description: "Solo performance at London's iconic venue"
+      description: "Broadway Hit - Defying Gravity"
     },
     {
       id: 5,
-      title: "La Bohème - Metropolitan Opera",
+      title: "Les Misérables",
       image: "https://images.pexels.com/photos/3823212/pexels-photo-3823212.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
       size: "square",
-      description: "Passionate performance as Rodolfo"
+      description: "Epic Musical - The People's Song"
     },
     {
       id: 6,
-      title: "Les Misérables",
+      title: "Chicago",
       image: "https://images.pexels.com/photos/8386365/pexels-photo-8386365.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
       size: "tall",
-      description: "Powerful portrayal of Jean Valjean"
+      description: "Jazz Age Musical - All That Jazz"
     },
     {
       id: 7,
-      title: "Chamber Music Series",
+      title: "Rent",
       image: "https://images.pexels.com/photos/3823446/pexels-photo-3823446.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
       size: "square",
-      description: "Intimate performance with string quartet"
+      description: "Rock Musical - Seasons of Love"
     },
     {
       id: 8,
-      title: "Wicked - Original Cast",
+      title: "Mamma Mia!",
       image: "https://images.pexels.com/photos/7991624/pexels-photo-7991624.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
       size: "tall",
-      description: "Defying gravity as the Wizard of Oz"
+      description: "ABBA Musical - Dancing Queen"
     },
     {
       id: 9,
-      title: "Chicago - Revival",
+      title: "West Side Story",
       image: "https://images.pexels.com/photos/3823448/pexels-photo-3823448.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
       size: "square",
-      description: "Jazz-age performance as Billy Flynn"
+      description: "Classic Musical - Tonight"
     },
     {
       id: 10,
-      title: "Behind the Scenes",
+      title: "La Bohème",
       image: "https://images.pexels.com/photos/7991625/pexels-photo-7991625.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
       size: "tall",
-      description: "Exclusive backstage moments and preparation"
+      description: "Opera - Che Gelida Manina"
     }
   ];
 
