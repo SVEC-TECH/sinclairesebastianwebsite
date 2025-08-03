@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 4;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .masonry-grid {
+      column-count: 5;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 0.8s ease-in-out forwards;
+  }
+  
+  .animate-zoom-out {
+    animation: zoomOut 0.8s ease-in-out forwards;
+  }
+  
+  .animate-expand-circle {
+    animation: expandCircle 0.8s ease-in-out forwards;
+  }
+  
+  .animate-ripple {
+    animation: ripple 0.6s ease-out forwards;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(20);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes zoomOut {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1) rotate(2deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(0) rotate(10deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes expandCircle {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(50);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
