@@ -7,8 +7,8 @@ const WorkGallery: React.FC = () => {
   const works = [
     {
       id: 1,
-      title: "The Lion King",
-      image: "https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
+      title: "Mary poppins Returns",
+      image: "public/MV5BMjE4MjI3OTIyNF5BMl5BanBnXkFtZTgwNjA3MDQwNzM@._V1_.jpg",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       size: "tall",
       description: "Broadway Musical - Starring as Simba"
