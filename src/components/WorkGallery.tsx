@@ -32,7 +32,7 @@ const WorkGallery: React.FC = () => {
     {
       id: 4,
       title: "Conjuring Universe",
-      image: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400&h=300",
+      image: "public/annabelle2-jumbo.webp",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       size: "wide",
       description: "Don't You Dare"
