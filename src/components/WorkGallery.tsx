@@ -11,39 +11,39 @@ const WorkGallery: React.FC = () => {
       image: "public/MV5BMjE4MjI3OTIyNF5BMl5BanBnXkFtZTgwNjA3MDQwNzM@._V1_.jpg",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       size: "tall",
-      description: "Broadway Musical - Starring as Simba"
+      description: "Sinclaire's Overture with Lin Manuel Miranda"
     },
     {
       id: 2,
-      title: "Hamilton",
-      image: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+      title: "Wonka",
+      image: "wonka alan style.jfif",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       size: "square",
-      description: "West End Production - Revolutionary Performance"
+      description: "Sinclaire's choclatey vision of pure imagination"
     },
     {
       id: 3,
-      title: "Phantom of the Opera",
-      image: "https://images.pexels.com/photos/3823211/pexels-photo-3823211.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
+      title: "Frozen",
+      image: "public/elsas-frozen-2-dress-is-my-favorite-v0-nqutr9z89vqd1.jpg",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       size: "tall",
-      description: "Classic Musical - The Phantom's Haunting Voice"
+      description: "Walk into the unknown with Sinclaire and Beck"
     },
     {
       id: 4,
-      title: "Wicked",
+      title: "Conjuring Universe",
       image: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400&h=300",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       size: "wide",
-      description: "Broadway Hit - Defying Gravity"
+      description: "Don't You Dare"
     },
     {
       id: 5,
-      title: "Les Misérables",
-      image: "https://images.pexels.com/photos/3823212/pexels-photo-3823212.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+      title: "Mufasa The Lion King",
+      image: "mufasa.webp",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
       size: "square",
-      description: "Epic Musical - The People's Song"
+      description: "Review Mufasa's Past"
     },
     {
       id: 6,
