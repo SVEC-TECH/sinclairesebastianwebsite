@@ -7,83 +7,83 @@ const WorkGallery: React.FC = () => {
   const works = [
     {
       id: 1,
-      title: "Mary poppins Returns",
-      image: "public/MV5BMjE4MjI3OTIyNF5BMl5BanBnXkFtZTgwNjA3MDQwNzM@._V1_.jpg",
+      title: "Frozen 2",
+      image: "/elsas-frozen-2-dress-is-my-favorite-v0-nqutr9z89vqd1.jpg",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       size: "tall",
-      description: "Sinclaire's Overture with Lin Manuel Miranda"
+      description: "Walk into the unknown with Sinclaire as Elsa"
     },
     {
       id: 2,
-      title: "Wonka",
-      image: "wonka alan style.jfif",
+      title: "Mary Poppins Returns",
+      image: "/MV5BMjE4MjI3OTIyNF5BMl5BanBnXkFtZTgwNjA3MDQwNzM@._V1_.jpg",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       size: "square",
-      description: "Sinclaire's choclatey vision of pure imagination"
+      description: "Sinclaire's magical performance with Lin Manuel Miranda"
     },
     {
       id: 3,
-      title: "Frozen",
-      image: "public/elsas-frozen-2-dress-is-my-favorite-v0-nqutr9z89vqd1.jpg",
+      title: "Mufasa: The Lion King",
+      image: "/mufasa.webp",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       size: "tall",
-      description: "Walk into the unknown with Sinclaire and Beck"
+      description: "Discover Mufasa's past with Sinclaire"
     },
     {
       id: 4,
-      title: "Conjuring Universe",
-      image: "public/annabelle2-jumbo.webp",
+      title: "Wonka",
+      image: "/wonka alan style.jfif",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       size: "wide",
-      description: "Don't You Dare"
+      description: "Sinclaire's chocolatey vision of pure imagination"
     },
     {
       id: 5,
-      title: "Mufasa The Lion King",
-      image: "mufasa.webp",
+      title: "The Lion King - Broadway",
+      image: "https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
       size: "square",
-      description: "Review Mufasa's Past"
+      description: "Broadway Musical - Circle of Life"
     },
     {
       id: 6,
-      title: "Chicago",
+      title: "Hamilton",
       image: "https://images.pexels.com/photos/8386365/pexels-photo-8386365.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
       size: "tall",
-      description: "Jazz Age Musical - All That Jazz"
+      description: "Revolutionary Musical - Wait for It"
     },
     {
       id: 7,
-      title: "Rent",
+      title: "Phantom of the Opera",
       image: "https://images.pexels.com/photos/3823446/pexels-photo-3823446.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
       size: "square",
-      description: "Rock Musical - Seasons of Love"
+      description: "Classic Musical - Music of the Night"
     },
     {
       id: 8,
-      title: "Mamma Mia!",
+      title: "Wicked",
       image: "https://images.pexels.com/photos/7991624/pexels-photo-7991624.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
       size: "tall",
-      description: "ABBA Musical - Dancing Queen"
+      description: "Broadway Hit - Defying Gravity"
     },
     {
       id: 9,
-      title: "West Side Story",
+      title: "Les Misérables",
       image: "https://images.pexels.com/photos/3823448/pexels-photo-3823448.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
       size: "square",
-      description: "Classic Musical - Tonight"
+      description: "Epic Musical - Do You Hear the People Sing"
     },
     {
       id: 10,
-      title: "La Bohème",
+      title: "Chicago",
       image: "https://images.pexels.com/photos/7991625/pexels-photo-7991625.jpeg?auto=compress&cs=tinysrgb&w=400&h=600",
       video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
       size: "tall",
-      description: "Opera - Che Gelida Manina"
+      description: "Jazz Age Musical - All That Jazz"
     }
   ];
 
