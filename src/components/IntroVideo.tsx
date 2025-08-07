@@ -49,7 +49,7 @@ const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
           playsInline
           onEnded={handleVideoEnd}
         >
-          <source src="/Dan Stevens - Evermore (From ＂Beauty and the Beast＂).mp4" type="video/mp4" />
+          <source src="/The Conjuring Last Rites - Official Trailer.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
