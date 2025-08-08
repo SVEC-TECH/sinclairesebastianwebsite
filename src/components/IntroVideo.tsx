@@ -96,7 +96,7 @@ const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
             Sseruwagi Sinclaire Sebastian
           </h1>
           <p className="text-lg md:text-xl font-light tracking-wider opacity-90">
-            Artist • Performer • Storyteller
+            Composer • Writter • Storyteller
           </p>
         </div>
       </div>
