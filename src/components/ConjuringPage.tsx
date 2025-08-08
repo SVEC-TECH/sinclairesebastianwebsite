@@ -12,7 +12,7 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/Annabelle Comes Home Image.webp')`,
+          backgroundvideo: `url('/Annabelle Comes Home Image.webp')`,
         }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
