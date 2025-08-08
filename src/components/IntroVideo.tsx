@@ -8,6 +8,8 @@ interface IntroVideoProps {
 const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
   const [showSkip, setShowSkip] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     // Show skip button after 3 seconds
@@ -20,10 +22,12 @@ const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
       if (!videoEnded) {
         handleVideoEnd();
       }
-    }, 120000); // 2 minutes
+    }, 180000); // 3 minutes
 
+    return () => {
+      clearTimeout(timer);
       clearTimeout(autoAdvanceTimer);
-    return () => clearTimeout(timer);
+    };
   }, [videoEnded]);
 
   const handleVideoEnd = () => {
@@ -38,17 +42,29 @@ const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
     onComplete();
   };
 
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
   return (
     <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
       {/* Video Container */}
       <div className="relative w-full h-full">
-        <iframe
+        <video
+          ref={videoRef}
           className="w-full h-full object-cover"
-          src="public/introvideo.mp4"
-          title="The Conjuring: Last Rites - Official Trailer"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
+          src="/introvideo.mp4"
+          autoPlay
+          muted={isMuted}
+          playsInline
+          onEnded={handleVideoEnd}
+          onError={(e) => {
+            console.error('Video failed to load:', e);
+            // Fallback: skip to next page if video fails
+            setTimeout(handleVideoEnd, 1000);
+          }}
         />
 
         {/* Overlay Gradient */}
@@ -65,6 +81,15 @@ const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
           <span className="text-sm font-medium tracking-wide">SKIP</span>
         </button>
 
+        {/* Mute/Unmute Button */}
+        <button
+          onClick={toggleMute}
+          className={`absolute top-8 right-32 bg-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300 ${
+            showSkip ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+          }`}
+        >
+          {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+        </button>
         {/* Artist Name Overlay */}
         <div className="absolute bottom-16 left-8 text-white">
           <h1 className="text-4xl md:text-6xl font-serif font-light italic mb-2 tracking-wide">
