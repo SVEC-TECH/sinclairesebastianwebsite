@@ -44,7 +44,7 @@ const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
       <div className="relative w-full h-full">
         <iframe
           className="w-full h-full object-cover"
-          src="https://www.youtube.com/embed/bMgfsdYoEEo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1"
+          src="public/introvideo.mp4"
           title="The Conjuring: Last Rites - Official Trailer"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
