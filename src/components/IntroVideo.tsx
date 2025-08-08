@@ -8,7 +8,7 @@ interface IntroVideoProps {
 const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
   const [showSkip, setShowSkip] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
