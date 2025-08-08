@@ -12,7 +12,7 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundimage: `url('/public/backgroundimage.jpg')`,
+          backgroundimage: `url('/backgroundimage.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
