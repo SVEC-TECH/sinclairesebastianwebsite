@@ -102,7 +102,7 @@ const Header: React.FC = () => {
         
         {/* Artist Name - Centered */}
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-800 tracking-wide">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-800 tracking-wide whitespace-nowrap">
             <span className="italic font-light">Sseruwagi Sinclaire Sebastian</span>
           </h1>
         </div>
