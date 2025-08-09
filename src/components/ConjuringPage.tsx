@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 interface ConjuringPageProps {
@@ -6,62 +6,127 @@ interface ConjuringPageProps {
 }
 
 const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const movies = [
+    {
+      title: "The Conjuring: Last Rites",
+      image: "https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      roles: ["Composer", "Editor", "Writer"]
+    },
+    {
+      title: "Frozen 2",
+      image: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      roles: ["VFX Artist", "Composer", "Sound Designer"]
+    },
+    {
+      title: "Mary Poppins Returns",
+      image: "https://images.pexels.com/photos/3823211/pexels-photo-3823211.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      roles: ["Music Producer", "Orchestrator", "Writer"]
+    },
+    {
+      title: "Mufasa: The Lion King",
+      image: "https://images.pexels.com/photos/8386365/pexels-photo-8386365.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      roles: ["Composer", "Music Supervisor", "Editor"]
+    },
+    {
+      title: "Wonka",
+      image: "https://images.pexels.com/photos/7991624/pexels-photo-7991624.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      roles: ["Songwriter", "Producer", "VFX Artist"]
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % movies.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(timer);
+  }, [movies.length]);
+
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Background Image with Dark Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundimage: `url('https://i.guim.co.uk/img/media/f1a41d0a93ffc8d6802cec61ab913b34574c52ac/901_0_4131_2480/master/4131.jpg?width=1300&dpr=1&s=none&crop=none')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/70"></div>
+      {/* Slider Container */}
+      <div className="relative w-full h-full">
+        {movies.map((movie, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            {/* Background Image */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url('${movie.image}')`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+
+            {/* Movie Title */}
+            <div className="absolute top-1/4 left-8 right-8 text-center">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-4 tracking-wider font-light">
+                {movie.title}
+              </h2>
+            </div>
+          </div>
+        ))}
       </div>
 
-    
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 text-center">
-        {/* Main Title */}
-        <div className="mb-16">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-red-100 mb-4 tracking-wider font-light">
-            <span className="block text-red-200 drop-shadow-2xl">THE</span>
-            <span className="block text-red-100 drop-shadow-2xl">CONJURING</span>
-            <span className="block text-red-300 drop-shadow-2xl italic">LAST RITES</span>
-          </h1>
-          
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-red-200/80 font-light tracking-widest uppercase">
-            A Horror Experience
-          </p>
-        </div>
-
-        {/* Credits */}
-        <div className="mb-12 space-y-2">
-          <div className="text-red-100/90 text-lg md:text-xl font-light tracking-wide">
-            <span className="block mb-4 text-red-200/70 text-sm uppercase tracking-widest">Written, Edited & Composed by</span>
-            <span className="font-serif text-2xl md:text-3xl italic">Sseruwagi Sinclaire Sebastian</span>
-          </div>
+      {/* Artist Name and Roles - Fixed at Bottom */}
+      <div className="absolute bottom-16 left-8 right-8 text-center">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 tracking-wider font-light italic">
+          Sseruwagi Sinclaire Sebastian
+        </h1>
+        
+        {/* Current Movie Roles */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {movies[currentSlide].roles.map((role, index) => (
+            <span
+              key={index}
+              className="text-lg md:text-xl text-white/90 font-light tracking-widest uppercase px-4 py-2 border border-white/30 rounded-full backdrop-blur-sm"
+            >
+              {role}
+            </span>
+          ))}
         </div>
 
         {/* Call to Action */}
         <button
           onClick={onContinue}
-          className="group flex items-center gap-4 bg-red-900/30 hover:bg-red-800/40 border border-red-700/50 text-red-100 px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105 hover:shadow-2xl hover:shadow-red-900/20"
+          className="group flex items-center gap-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105 hover:shadow-2xl mx-auto"
         >
-          <span className="text-lg font-light tracking-wide uppercase">See Other Works</span>
+          <span className="text-lg font-light tracking-wide uppercase">Explore Portfolio</span>
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
         </button>
-
-        {/* Atmospheric Elements */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-red-400/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-red-300/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-red-500/20 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Bottom Vignette */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {movies.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-white' : 'bg-white/30'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Progress Bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-white/20">
+        <div 
+          className="h-full bg-white transition-all duration-100 ease-linear"
+          style={{ 
+            width: `${((currentSlide + 1) / movies.length) * 100}%` 
+          }}
+        />
+      </div>
     </div>
-  )
+  );
 };
 
 export default ConjuringPage;
