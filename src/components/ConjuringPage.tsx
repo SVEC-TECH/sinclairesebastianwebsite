@@ -13,28 +13,28 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
     {
       title: "The Conjuring",
       year: "2013",
-      image: "https://images.pexels.com/photos/3823446/pexels-photo-3823446.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      image: "/conjuring1.webp",
       description: "The supernatural horror that started it all. Ed and Lorraine Warren investigate a dark presence haunting a family farmhouse.",
       roles: ["Composer", "Sound Designer", "Music Producer"]
     },
     {
       title: "The Conjuring 2",
       year: "2016", 
-      image: "https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      image: "/conjuring2.jpeg",
       description: "The Warrens travel to England to help a single mother raising four children alone in a house plagued by malicious spirits.",
       roles: ["Original Score", "Orchestrator", "Music Supervisor"]
     },
     {
       title: "The Conjuring: The Devil Made Me Do It",
       year: "2021",
-      image: "https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=1200", 
+      image: "/devilmade.jpeg",
       description: "A chilling story of terror, murder and unknown evil that shocked even experienced real-life paranormal investigators.",
       roles: ["Composer", "Additional Music", "Sound Design"]
     },
     {
       title: "The Conjuring: Last Rites",
       year: "2024",
-      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      image: "/last-rites.jpg",
       description: "The final chapter in the Conjuring saga. The Warrens face their most terrifying case yet in this bone-chilling conclusion.",
       roles: ["Original Score", "Music Producer", "Sound Designer"]
     }
