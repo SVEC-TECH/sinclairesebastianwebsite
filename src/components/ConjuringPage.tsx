@@ -102,7 +102,7 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
       </div>
 
       {/* Main Slider */}
-      <div className="relative w-full h-2/3">
+      <div className="relative w-full h-screen">
         {conjuringMovies.map((movie, index) => (
           <div
             key={index}
@@ -114,19 +114,19 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url('${movie.image}')`,
-                filter: 'brightness(0.3) contrast(1.2) saturate(0.8)'
+                filter: 'brightness(0.4) contrast(1.2) saturate(0.8)'
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
             </div>
 
-            {/* Movie Title */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* Movie Title - Positioned higher */}
+            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '-10vh' }}>
               <div className="text-center">
-                <h2 className="text-6xl md:text-8xl lg:text-9xl font-serif text-red-100 mb-4 tracking-wider font-light drop-shadow-2xl">
+                <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-red-100 mb-4 tracking-wider font-light drop-shadow-2xl">
                   {movie.title}
                 </h2>
-                <p className="text-2xl md:text-3xl text-red-200/80 font-light tracking-widest">
+                <p className="text-xl md:text-2xl text-red-200/80 font-light tracking-widest">
                   {movie.year}
                 </p>
               </div>
@@ -136,28 +136,28 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
       </div>
 
       {/* Movie Details Section */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/95 to-transparent p-8">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/95 to-transparent p-6 md:p-8">
         <div className="max-w-6xl mx-auto">
           {/* Movie Description */}
-          <div className="mb-8">
-            <p className="text-lg md:text-xl text-red-100/90 font-light leading-relaxed max-w-4xl">
+          <div className="mb-6">
+            <p className="text-base md:text-lg text-red-100/90 font-light leading-relaxed max-w-4xl mx-auto text-center">
               {currentMovie.description}
             </p>
           </div>
 
           {/* Artist Name */}
-          <div className="text-center mb-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-red-100 tracking-wider font-light italic drop-shadow-lg">
+          <div className="text-center mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-red-100 tracking-wider font-light italic drop-shadow-lg">
               Sseruwagi Sinclaire Sebastian
             </h1>
           </div>
           
           {/* Roles */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             {currentMovie.roles.map((role, index) => (
               <span
                 key={index}
-                className="text-lg md:text-xl text-red-200/90 font-light tracking-widest uppercase px-6 py-3 border border-red-800/50 rounded-full backdrop-blur-sm bg-black/30 hover:bg-red-900/20 transition-colors duration-300"
+                className="text-sm md:text-base text-red-200/90 font-light tracking-widest uppercase px-4 py-2 border border-red-800/50 rounded-full backdrop-blur-sm bg-black/30 hover:bg-red-900/20 transition-colors duration-300"
               >
                 {role}
               </span>
@@ -168,9 +168,9 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
           <div className="text-center">
             <button
               onClick={onContinue}
-              className="group flex items-center gap-4 bg-red-900/30 hover:bg-red-800/40 border border-red-700/50 text-red-100 px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105 hover:shadow-2xl mx-auto"
+              className="group flex items-center gap-3 bg-red-900/30 hover:bg-red-800/40 border border-red-700/50 text-red-100 px-6 py-3 rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105 hover:shadow-2xl mx-auto"
             >
-              <span className="text-lg font-light tracking-wide uppercase">Enter Portfolio</span>
+              <span className="text-base font-light tracking-wide uppercase">Enter Portfolio</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
@@ -178,7 +178,7 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-8 flex gap-3">
+      <div className="absolute bottom-6 left-6 flex gap-3">
         {conjuringMovies.map((_, index) => (
           <button
             key={index}
@@ -203,7 +203,7 @@ const ConjuringPage: React.FC<ConjuringPageProps> = ({ onContinue }) => {
       </div>
 
       {/* Creepy Audio Visualization */}
-      <div className="absolute bottom-20 right-8 flex items-center gap-1">
+      <div className="absolute bottom-16 right-6 flex items-center gap-1">
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
